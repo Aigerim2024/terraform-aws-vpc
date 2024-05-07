@@ -5,3 +5,8 @@ variables "cidr_block" {
 variables "region" {
     default = "us-east-2"
 }
+
+variable "availability_zones" {
+  type    = list(string)
+  default = ["us-east-2a", "us-east-2b", "us-east-2c"]
+}

@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "us-east-2"
+  region = var.region
 }
 
 resource "aws_vpc" "terraform6" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.cidr_block
 }
 
 resource "aws_subnet" "public_subnets" {
