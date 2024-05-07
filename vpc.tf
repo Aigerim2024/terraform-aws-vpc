@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.region
-}
-
 resource "aws_vpc" "terraform6" {
   cidr_block = var.cidr_block
 }
@@ -27,9 +23,4 @@ resource "aws_subnet" "private_subnets" {
   tags = {
     Name = "private-subnet-${count.index + 1}"
   }
-}
-
-variable "availability_zones" {
-  type    = list(string)
-  default = ["us-east-2a", "us-east-2b", "us-east-2c"]
 }
